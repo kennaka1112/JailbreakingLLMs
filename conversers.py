@@ -24,7 +24,8 @@ def load_attack_and_target_models(args):
 def load_indiv_model(model_name, local = False, use_jailbreakbench=True):
     if use_jailbreakbench: 
         if local:
-            from jailbreakbench import LLMvLLM
+            from jailbreakbench import LLMvLLM        # JailbreakBench/src/jailbreakbench/llm/vllm.py
+
             lm = LLMvLLM(model_name=model_name)
         else:
             from jailbreakbench import LLMLiteLLM
