@@ -20,7 +20,7 @@ def main(args):
 
 
     # Initialize models and judge
-    attackLM, targetLM = load_attack_and_target_models(args)    # conversers 
+    attackLM, targetLM = load_attack_and_target_models(args)                                # conversers 
     judgeLM = load_judge(args)
     
     # Initialize conversations
@@ -37,7 +37,7 @@ def main(args):
         
 
         # Get adversarial prompts and improvement
-        extracted_attack_list = attackLM.get_attack(convs_list, processed_response_list)
+        extracted_attack_list = attackLM.get_attack(convs_list, processed_response_list)     # conversers 
         logger.debug("Finished getting adversarial prompts.")
 
         # Extract prompts and improvements
@@ -47,7 +47,7 @@ def main(args):
         print(f"Memory before: {memory_before} MB")
         print(f"Memory after: {memory_after} MB")
         # Get target responses
-        target_response_list = targetLM.get_response(adv_prompt_list)
+        target_response_list = targetLM.get_response(adv_prompt_list)                        # conversers 
         logger.debug("Finished getting target responses.")
         
         # Get judge scores
