@@ -96,7 +96,7 @@ class AttackLM():
             # Subset conversations based on indices to regenerate
             convs_subset = [openai_conv_list[i] for i in indices_to_regenerate]
             # Generate outputs 
-            outputs_list = self.model.batched_generate(convs_subset,
+            outputs_list = self.model.batched_generate(convs_subset,                          # where's the definition?
                                                         max_n_tokens = self.max_n_tokens,  
                                                         temperature = self.temperature,
                                                         top_p = self.top_p,
