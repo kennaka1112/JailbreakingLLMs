@@ -20,7 +20,7 @@ def main(args):
 
 
     # Initialize models and judge
-    attackLM, targetLM = load_attack_and_target_models(args)
+    attackLM, targetLM = load_attack_and_target_models(args)    # conversers 
     judgeLM = load_judge(args)
     
     # Initialize conversations
