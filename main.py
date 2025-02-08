@@ -21,7 +21,7 @@ def main(args):
 
     # Initialize models and judge
     attackLM, targetLM = load_attack_and_target_models(args)                                # conversers 
-    judgeLM = load_judge(args)
+    judgeLM = load_judge(args)                                                              # judges
     
     # Initialize conversations
     convs_list, processed_response_list, system_prompts = initialize_conversations(args.n_streams, args.goal, args.target_str, attackLM.template)
