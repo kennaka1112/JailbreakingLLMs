@@ -194,7 +194,7 @@ class TargetLM():
                 conv.append_message(conv.roles[0], prompt)
                 full_prompts.append(conv.to_openai_api_messages())
 
-            responses = self.model.batched_generate(full_prompts, 
+            responses = self.model.batched_generate(full_prompts,                        # where's the definition?
                                                             max_n_tokens = self.max_n_tokens,  
                                                             temperature = self.temperature,
                                                             top_p = self.top_p
