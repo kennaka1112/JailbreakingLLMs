@@ -33,7 +33,7 @@ def main(args):
     for iteration in range(1, args.n_iterations + 1):
         logger.debug(f"""\n{'='*36}\nIteration: {iteration}\n{'='*36}\n""")
         if iteration > 1:
-            # target_responsed returned from get_response
+            # process_target_response in common.py
             processed_response_list = [process_target_response(target_response, score, args.goal, args.target_str) for target_response, score in zip(target_response_list,judge_scores)]   
         
 
