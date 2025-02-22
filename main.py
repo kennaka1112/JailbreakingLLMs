@@ -24,7 +24,7 @@ def main(args):
     judgeLM = load_judge(args)                                                              # judges
     
     # Initialize conversations
-    convs_list, processed_response_list, system_prompts = initialize_conversations(args.n_streams, args.goal, args.target_str, attackLM.template)
+    convs_list, processed_response_list, system_prompts = initialize_conversations(args.n_streams, args.goal, args.target_str, attackLM.template)    # common
     batchsize = args.n_streams
     
     wandb_logger = WandBLogger(args, system_prompts)
