@@ -64,7 +64,7 @@ def set_system_prompts(system_prompts, convs_list):
     for i,conv in enumerate(convs_list):
         conv.set_system_message(system_prompts[i%num_system_prompts])
         
-
+# from main.py
 def initialize_conversations(n_streams: int, goal: str, target_str: str, attacker_template_name: str):
     batchsize = n_streams
     init_msg = get_init_msg(goal, target_str)
