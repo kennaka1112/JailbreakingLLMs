@@ -72,7 +72,7 @@ def initialize_conversations(n_streams: int, goal: str, target_str: str, attacke
     convs_list = [conv_template(attacker_template_name) for _ in range(batchsize)]
 
     # Set system prompts
-    system_prompts = get_attacker_system_prompts(goal, target_str)
+    system_prompts = get_attacker_system_prompts(goal, target_str)         # system_prompts.py
     set_system_prompts(system_prompts, convs_list)
     return convs_list, processed_response_list, system_prompts
 
